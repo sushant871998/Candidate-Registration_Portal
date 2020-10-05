@@ -6,18 +6,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Job Porta</title>
+    <title>Job Portal</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="ISO-8859-1">
     <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -59,34 +54,29 @@
   <body>
     <div class="container">
   <header class="blog-header py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="#">Large</a>
-      </div>
-      <div class="col-4 d-flex justify-content-end align-items-center">
-        <form action="../google.com">
+    <div class="row flex-nowrap justify-content-end align-items-center">
+
+      <div class="nav justify-content-end" >
+        <form action="/search" class="justify-content-end" >
           <input type="text" name="search" placeholder="Search..">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <a class="btn btn-sm btn-outline-secondary ml-3" href="/admin">Admin Login</a>
+        <a class="btn btn-sm btn-outline-secondary ml-3 justify-content-end" href="/admin">Admin Login</a>
       </div>
     </div>
   </header>
 
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="#">World</a>
-      <a class="p-2 text-muted" href="#">U.S.</a>
-      <a class="p-2 text-muted" href="#">Technology</a>
-      <a class="p-2 text-muted" href="#">Design</a>
-      <a class="p-2 text-muted" href="#">Culture</a>
-      <a class="p-2 text-muted" href="#">Business</a>
-      <a class="p-2 text-muted" href="#">Politics</a>
-      <a class="p-2 text-muted" href="#">Opinion</a>
-      <a class="p-2 text-muted" href="#">Science</a>
-      <a class="p-2 text-muted" href="#">Health</a>
-      <a class="p-2 text-muted" href="#">Style</a>
-      <a class="p-2 text-muted" href="#">Travel</a>
+      <a class="p-2 text-muted" href="#">BI-Analytics</a>
+      <a class="p-2 text-muted" href="#">FrontEnd</a>
+      <a class="p-2 text-muted" href="#">Backend</a>
+      <a class="p-2 text-muted" href="#">DataBase</a>
+      <a class="p-2 text-muted" href="#">Operations</a>
+      <a class="p-2 text-muted" href="#">DevOps</a>
+      <a class="p-2 text-muted" href="#">Sales</a>
+      <a class="p-2 text-muted" href="#">Finance</a>
+      <a class="p-2 text-muted" href="#">HR</a>
     </nav>
   </div>
 
@@ -98,7 +88,19 @@
     </div>
   </div>
 <hr><br>
+ <div class="row">
 <h2 class="font-weight-normal">Job Posts</h2>
+<span class="dropdown" style="margin-left:780px;">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort By
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/by-name?">By Title</a>
+    <a class="dropdown-item" href="/by-exp?">By Exp required</a>
+    <a class="dropdown-item" href="/by-doi?">By Date of Interview</a>
+  </div>
+</span>
+</div>
 <hr>
 <c:forEach items="${list}" var="element">
    <div class="card bg-light mb-3" >

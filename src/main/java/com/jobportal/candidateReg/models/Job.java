@@ -1,9 +1,7 @@
 package com.jobportal.candidateReg.models;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 public class Job {
@@ -79,9 +77,10 @@ public class Job {
 
     @Override
     public String toString() {
+        List<String> list =new ArrayList<String>();
+        list.add(candidates.toString());
         return "Job{" +
-                "jobId=" + jobId +
-                ", candidates=" + candidates +
+                ", candidates=" + list +
                 ", title='" + title + '\'' +
                 ", details='" + details + '\'' +
                 ", req_experience=" + req_experience +

@@ -8,10 +8,22 @@ public class Candidate {
     String lname;
     String email;
     String phone;
+
+    public int getCandidateId() {
+        return candidateId;
+    }
+
+//    public void setCandidateId(int candidateId) {
+//        this.candidateId = candidateId;
+//    }
+
     int experience;
-    @Id
     @Column(name="unique_id")
     String uniqueId;
+
+    @Id
+    @Column(name="candidate_id")
+    int candidateId;
     boolean status;
 
 
@@ -107,7 +119,6 @@ public class Candidate {
                 ", experience=" + experience +
                 ", uniqueId='" + uniqueId + '\'' +
                 ", status=" + status +
-                ", jobId=" + jobId +
                 '}';
     }
 }
